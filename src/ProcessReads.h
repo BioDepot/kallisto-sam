@@ -169,6 +169,7 @@ private:
 
 class MasterProcessor {
 public:
+  PseudoAlignmentBatch pseudobatchv;
   MasterProcessor (KmerIndex &index, const ProgramOptions& opt, MinCollector &tc, const Transcriptome& model)
     : tc(tc), index(index), model(model), bamfp(nullptr), bamfps(nullptr), bamh(nullptr), opt(opt), numreads(0)
     ,nummapped(0), num_umi(0), bufsize(1ULL<<23), tlencount(0), biasCount(0), maxBiasCount((opt.bias) ? 1000000 : 0), last_pseudobatch_id (-1) { 
@@ -196,7 +197,7 @@ public:
         ofusion << "TYPE\tNAME1\tSEQ1\tKPOS1\tNAME2\tSEQ2\tKPOS2\tINFO\tPOS1\tPOS2\n";
       }
       if (opt.pseudobam) {
-        pseudobatchf_out.open(opt.output + "/pseudoaln.bin", std::ios::out | std::ios::binary);
+        //pseudobatchf_out.open(opt.output + "/pseudoaln.bin", std::ios::out | std::ios::binary);
       }
       if (opt.bus_mode) {
         busf_out.open(opt.output + "/output.bus", std::ios::out | std::ios::binary);
