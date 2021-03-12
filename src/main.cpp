@@ -2192,8 +2192,8 @@ int main(int argc, char *argv[]) {
             start_time,
             call);
 
-        plaintext_writer(opt.output + "/abundance.tsv", em.target_names_,
-            em.alpha_, em.eff_lens_, index.target_lens_);
+        //plaintext_writer(opt.output + "/abundance.tsv", em.target_names_,
+        //    em.alpha_, em.eff_lens_, index.target_lens_);
 
         if (opt.bootstrap > 0 && num_pseudoaligned == 0) {
           // this happens if nothing aligns, then we write an empty bootstrap file
@@ -2327,8 +2327,8 @@ int main(int argc, char *argv[]) {
               start_time,
               call);
 
-          plaintext_writer(opt.output + "/abundance.tsv", em.target_names_,
-              em.alpha_, em.eff_lens_, index.target_lens_);
+          //plaintext_writer(opt.output + "/abundance.tsv", em.target_names_,
+          //    em.alpha_, em.eff_lens_, index.target_lens_);
         }
 
         int64_t num_pseudoaligned =0;

@@ -1,6 +1,4 @@
-# kallisto-sam
-
-__kallisto-sam__ is a modification of kallisto. Older versions of kallisto used to output sam to stdout instead of saving a pseudobam file when the pseudobam option was chosen. We have restored this functionality and disabled the mandatory output of abundances and json files. This is for plugin functionality in our current workflows. Only the output routines are affected - the rest of kallisto is unaltered.
+# kallisto
 
 __kallisto__ is a program for quantifying abundances of transcripts from
 RNA-Seq data, or more generally of target sequences using high-throughput

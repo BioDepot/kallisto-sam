@@ -33,7 +33,7 @@ void plaintext_writer(
     const std::vector<double>& eff_lens,
     const std::vector<int>& lens
     ){
-  return;
+
   std::ofstream of;
   of.open( out_name );
 
@@ -101,7 +101,6 @@ void plaintext_aux(
     const std::string& index_v,
     const std::string& start_time,
     const std::string& call) {
-	return;
   std::ofstream of;
   of.open( out_name );
   
