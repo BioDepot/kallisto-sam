@@ -2202,8 +2202,8 @@ int main(int argc, char *argv[]) {
               #ifdef USE_HDF5
               writer.write_bootstrap(em, b); // em is empty
               #endif
-            } else {
-              plaintext_writer(opt.output + "/bs_abundance_" + std::to_string(b) + ".tsv",
+            } else if(!opt.pseudobam){
+				 plaintext_writer(opt.output + "/bs_abundance_" + std::to_string(b) + ".tsv",
                     em.target_names_, em.alpha_, em.eff_lens_, index.target_lens_); // re-use empty input
             }
           }
@@ -2241,7 +2241,7 @@ int main(int argc, char *argv[]) {
                 #ifdef USE_HDF5
                 writer.write_bootstrap(res, b);
                 #endif
-              } else {
+              } else if (!opt.pseudobam){
                 plaintext_writer(opt.output + "/bs_abundance_" + std::to_string(b) + ".tsv",
                     em.target_names_, res.alpha_, em.eff_lens_, index.target_lens_);
               }
